@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    const fs = require('fs');
+    const $ = jQuery = require('jquery');
+  </script>
+</head>
+<script type="text/javascript">
+  const dataharga = JSON.parse(fs.readFileSync("./dataHarga.json", "utf8"));
+  const masukharga = JSON.parse(fs.readFileSync("./pennjualan.json", "utf8"));
+</script>
+<!-- home.css -->
+<link rel="stylesheet" href="../public/style/home.css">
+<link rel="stylesheet" href="../public/style/input.css">
+
+
+<!-- material select component -->
+<script src="../public/js/jquery.nice-select.min.js"></script>
+<link rel="stylesheet" href="../public/style/nice-select.css">
+<link rel="stylesheet" href="../public/style/table.css">
+
+<!-- tambah barang.js function untuk memasukkan data kedalam database -->
+<script src="../public/js/tambahBarang.js"></script>
+<script src="../public/js/editHarga.js"></script>
+<script src="../public/js/penjualan.js"></script>
+
+<body>
+  <!-- ============Navbar===================== -->
+  <div class="container">
+    <div class="header">
+      <div class="buttoncard tab">
+        <a href="login.html" class="button button1">Logout</a>
+        <button class="button button1" id="tambahBarangb">Tambah Barang</button>
+        <button class="button button1" id="penjualanb">Penjualan</button>
+        <button class="button button1" id="editHargab">Edit Harga</button>
+        <a href="riwayat.html" class="button button1">Pendataan</a>
+
+      </div>
+    </div>
+    <!-- ========================================== -->
+
+    <!-- ============Tambahbarang============ -->
+    <div id="tambahBarang">
+      <h1>Tambah Barang</h1>
+      <div class="card"><br><br> <!-- card open -->
+        <form class="" method="post" name="tambahbarang">
+          <div class="inpt">
+            <div class="form_group">
+              <input type="text" name="nama" value="" id="namatambah" required class="tamba">
+              <label>Nama Barang</label>
+            </div><br><br>
+            <div class="form_group">
+              <input type="text" name="harga" value="" id="hargatambah" required class="tamba">
+              <label>Harga</label>
+            </div><br><br>
+            <!-- Button -->
+            <button type="button" name="button" onclick="tambah()" class="button button1">Tambah</button>
+          </div>
+        </form><br><br><br>
+        <!-- Memunculkan teks bahwa harga berhasil ditambah -->
+        <div id="alert">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ===============================Edit Harga========================================== -->
+    <div id="editHarga">
+      <h1 align="center">Edit Harga</h1>
+      <!-- table harga -->
+      <div class="centertable">
+        <form class="" action="" method="" name="form">
+          <table border="1px" id="customers">
+            <tr>
+              <th width="250px">Nama barang</th>
+              <th width="250px">Harga</th>
+            </tr>
+          </table>
+        </form><br>
+        <div class="">
+          <button class="button button1" type="button" onclick="edit()">Edit</button>
+        </div>
+      </div>
+    </div>
+    <!-- ====================================================================================== -->
+
+    <!-- ==============================Penjualan=============================================== -->
+    <div id="penjualan">
+      <h1>Penjualan</h1>
+      <form name="jual">
+        <div class="card"><br>
+          <div class="akir">
+            <select id="namabarang" name="barang" onchange="hooh()"></select><br><br><br><br>
+            <div class="form_group">
+              <input class="isian" id="jumlah" type="number" name="" oninput="hooh()">
+              <label>Jumlah Beli</label>
+            </div><br><br>
+            <div class="form_group">
+              <input class="isian" id="semua" type="text" name="" value="" readonly>
+            </div>
+            <button id="hidetable" class="button1 button" type="button" name="" onclick="tab()">Tambah</button>
+          </div>
+          <div class="hr"></div>
+          <div id="jdl">
+            <h2 align="center" style="position: sticky;">Troli</h2>
+            <div class="tabletotal">
+              <table style="text-align: center;" id="huu" align="center">
+                <tr>
+                  <th width="150px">Nama Barang</th>
+                  <th width="100px">Harga</th>
+                  <th width="120px">Jumlah Beli</th>
+                  <th width="150px">Subtotal</th>
+                  <th width="50px">Action</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="posisi">
+            <button id="pro" type="button" name="button" onclick="proses()" class="button1 button buron">Proses</button>
+            <button id="oop" type="button" name="button" onclick="selesai()" class="button1 button buron">Akhiri Transaksi</button>
+          </div>
+        </div>
+      </form><br>
+      <div id="output"></div>
+    </div><br><br>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#namabarang').niceSelect();
+      $("#pro").click(function() {
+        $("#oop").show();
+      })
+
+      $("#huu,.buron").hide();
+      $("#editHarga, #tambahBarang").hide();
+
+      $("#hidetable").click(function() {
+        $("#huu, #pro").show();
+      });
+
+      $("#tambahBarangb").click(function() {
+        $("#editHarga, #penjualan").hide();
+        $("#tambahBarang").show();
+      });
+
+      $("#editHargab").click(function() {
+        $("#tambahBarang, #penjualan").hide();
+        $("#editHarga").show();
+      });
+
+      $("#penjualanb").click(function() {
+        $("#tambahBarang, #editHarga").hide();
+        $("#penjualan").show();
+      });
+    })
+  </script>
+</body>
+
+</html>

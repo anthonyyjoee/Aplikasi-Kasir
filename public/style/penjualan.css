@@ -1,0 +1,117 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  text-align: center;
+}
+
+/* header */
+.header {
+  background-color: #263238;
+  min-width: 1350px;
+  height: 50px;
+  text-align: center;
+}
+
+.buttoncard {
+  background-color: #263238;
+  width: 530px;
+  min-height: 1px;
+  margin: 0px auto;
+}
+
+/* button */
+.button {
+  background-color: #263238;
+  border: none;
+  color: white;
+  padding: 15.5px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px 0px auto;
+  -webkit-transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #263238;
+  color: #cfd8dc;
+}
+
+.button1:hover {
+  background-color: #455a64;
+  color: white;
+}
+
+/* card form */
+.card {
+  background-color: white;
+  text-align: center;
+  padding: 5px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  border: 3px solid #263238;
+  border-radius: 50px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.form_group {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+}
+
+input {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #263238;
+  width: 600px;
+  height: 40px;
+  display: block;
+  font-size: 20px;
+}
+
+.form_group label {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  font-size: 14px;
+  color: black;
+}
+
+input:focus {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid purple;
+  transition-duration: 0.5s;
+  font-size: 20px;
+}
+
+input:focus~label {
+  top: -20px;
+  font-size: 14px;
+}
+
+input:valid~label {
+  top: -20px;
+  font-size: 14px;
+}
+
+.inpt {
+  margin: 0px auto;
+  height: 300px;
+  width: 600px;
+}

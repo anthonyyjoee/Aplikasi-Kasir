@@ -1,0 +1,19 @@
+{
+  "name": "Chasier",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Atnjedtta",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.11"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "jquery-nice-select": "^1.1.0",
+    "sweetalert2": "^9.4.3"
+  }
+}

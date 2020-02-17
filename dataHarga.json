@@ -1,0 +1,23 @@
+{
+  "Monitor": {
+    "harga": 4000000
+  },
+  "Mouse": {
+    "harga": 500000
+  },
+  "Keyboard": {
+    "harga": 1200000
+  },
+  "Mousepad": {
+    "harga": 200000
+  },
+  "Monitor": {
+    "harga": 3000000
+  },
+  "Speaker": {
+    "harga": 700000
+  },
+  "Hardisk": {
+    "harga": 1200000
+  }
+}

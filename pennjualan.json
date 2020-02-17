@@ -1,0 +1,56 @@
+{
+  "2019-12-04": {
+    "23:24:03": {
+      "Telur Horn": {
+        "jumlah": 1,
+        "harga": 30000,
+        "subtotal": 30000
+      },
+      "Minyak Sunco": {
+        "jumlah": 2,
+        "harga": 15000,
+        "subtotal": 30000
+      },
+      "total": 60000
+    },
+    "23:51:16": {
+      "Mac": {
+        "jumlah": 3,
+        "harga": 30000000,
+        "subtotal": 90000000
+      },
+      "total": 270000000
+    }
+  },
+  "2019-12-06": {
+    "07:56:17": {
+      "Mac": {
+        "jumlah": 2,
+        "harga": 30000000,
+        "subtotal": 60000000
+      },
+      "total": 60000000
+    },
+    "10:56:33": {
+      "pop ice": {
+        "jumlah": 1,
+        "harga": 3000,
+        "subtotal": 3000
+      },
+      "Hardisk": {
+        "jumlah": 2,
+        "harga": 1200000,
+        "subtotal": 2400000
+      },
+      "total": 2403000
+    },
+    "11:11:25": {
+      "Mac": {
+        "jumlah": 1,
+        "harga": 30000000,
+        "subtotal": 30000000
+      },
+      "total": 30000000
+    }
+  }
+}

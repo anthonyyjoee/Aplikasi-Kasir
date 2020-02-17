@@ -1,0 +1,179 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+}
+
+/* penjualan.html form */
+.akir {
+  /* for left subcard inside the main card */
+  background-color: transparent;
+  height: 300px;
+  width: 305px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  float: left;
+}
+
+#hidetable {
+  float: right;
+}
+
+.tabletotal {
+  background-color: transparent;
+  height: 220px;
+  width: 550px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  float: left;
+  margin-left: 20px;
+  overflow-x: auto;
+}
+
+.posisi {
+  position: fixed;
+  left: 568px;
+  top: 459px;
+}
+
+.hr {
+  width: 1px;
+  height: 350px;
+  background-color: gray;
+  vertical-align: middle;
+  float: left;
+}
+
+/* form penjualan */
+.isian {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #263238;
+  width: 300px;
+  height: 40px;
+  display: block;
+  font-size: 20px;
+}
+
+.isian:focus~label {
+  top: -20px;
+  font-size: 14px;
+}
+
+.isian:focus {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid purple;
+  transition-duration: 0.5s;
+  font-size: 20px;
+}
+
+/* End of penjualan.html form */
+.inpt {
+  margin: 0px auto;
+  height: 300px;
+  width: 600px;
+}
+
+.header {
+  background-color: #263238;
+  min-width: 1350px;
+  height: 50px;
+  text-align: center;
+}
+
+/* button */
+.buttoncard {
+  background-color: #263238;
+  width: 1365px;
+  min-height: 1px;
+  margin: 0px auto;
+}
+
+.button {
+  background-color: #263238;
+  border: none;
+  color: white;
+  padding: 15.5px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px 0px auto;
+  -webkit-transition-duration: 0.5s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button1 {
+  background-color: #263238;
+  color: #cfd8dc;
+}
+
+.button1:hover {
+  background-color: #455a64;
+  color: white;
+}
+
+/* Form */
+.form_group {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+}
+
+.tamba {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid #263238;
+  width: 600px;
+  height: 40px;
+  display: block;
+  font-size: 20px;
+}
+
+.form_group label {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  font-size: 14px;
+  color: black;
+}
+
+.tamba:focus~label {
+  top: -20px;
+  font-size: 14px;
+}
+
+.tamba:focus {
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 2px solid purple;
+  transition-duration: 0.5s;
+  font-size: 20px;
+}
+
+.tamba:valid~label {
+  top: -20px;
+  font-size: 14px;
+}
+
+.tamba:valid {
+  border-bottom: 2px solid #6DC85B;
+  font-size: 20px;
+}
+
+/* end of form */

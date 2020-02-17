@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+    const $ = jQuery = require('jquery');
+  </script>
+</head>
+<style media="screen">
+  th,
+  td {
+    text-align: center;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  table {
+    border: 0.5px solid gray;
+    border-spacing: 0px;
+  }
+</style>
+
+<script src="../public/js/jquery.nice-select.min.js"></script>
+<link rel="stylesheet" href="../public/style/nice-select.css">
+<link rel="stylesheet" href="../public/style/table.css">
+
+<script type="text/javascript">
+  const fs = require('fs');
+  const masukharga = JSON.parse(fs.readFileSync("./pennjualan.json", "utf8"));
+  const pembelianOption = Object.keys(masukharga);
+  toMoney = (num) => {
+    return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  };
+</script>
+<script src="../public/js/riwayat.js"></script>
+
+<body>
+  <div class="input-field col s5">
+    <select width="500px" id="selecttgl" onchange="updateTabel()">
+      <!-- <option value="" disabled selected>Pilih Tanggal</option> -->
+      <script type="text/javascript">
+        pembelianOption.forEach(v => {
+          document.write(`<option value="${v}">${v}</option>`);
+        });
+      </script>
+    </select><br><br><br>
+
+  </div>
+  <table border="1" id="tableGudang">
+    <tr>
+      <th>Jam</th>
+      <th>Nama Barang</th>
+      <th>Harga</th>
+      <th>Jumlah</th>
+      <th>Sub-total</th>
+      <th>Total</th>
+    </tr>
+  </table>
+  <a href="home.html">home</a>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#selecttgl').niceSelect();
+    });
+  </script>
+
+</body>
+
+</html>
